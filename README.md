@@ -37,7 +37,7 @@ plt.axis("off")
 plt.show()
 ```
 
-The distributions of reviewer ratings center around 5 to 6 (mean: 5.15).
+The distributions of reviewer ratings center around 4 (mean: 3.9067).
 
 <p align="center">
     <img src="asset/rating.png" width="640"/>

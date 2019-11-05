@@ -49,7 +49,7 @@ You can compute how many papers are beaten by yours with
 def PR(rating_mean, your_rating):
     pr = np.sum(your_rating >= np.array(rating_mean))/len(rating_mean)*100
     return pr
-my_rating = (6+6+6)/3  # your average rating here
+my_rating = (6+6+3)/3  # your average rating here
 print('Your papar beats {:.2f}% of submission '
       '(well, jsut based on the ratings...)'.format(PR(rating_mean, my_rating)))
 #            accept rate       orals     posters
@@ -60,7 +60,7 @@ print('Your papar beats {:.2f}% of submission '
 ```
 [Output]
 ```
-Your papar (6.00) beats 92.85% of submission (well, jsut based on the ratings...)
+Your papar (5.00) beats 69.95% of submission (well, jsut based on the ratings...)
 ```
 
 The top 50 common keywords and their frequency.

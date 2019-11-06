@@ -37,7 +37,7 @@ plt.axis("off")
 plt.show()
 ```
 
-The distribution of reviewer ratings centers around 4 (mean: 3.9067).
+The distribution of reviewer ratings centers around 4 (mean: 3.907).
 
 <p align="center">
     <img src="asset/rating.png" width="640"/>
@@ -169,7 +169,7 @@ print(browser.find_element_by_class_name('bio').text)
 ```
 
 ## <a id="Data"></a>All ICLR 2020 OpenReview data
-Collected at 2019-11-05 21:26:21.534487
+Collected at 2019-11-05 21:39:27.837124
 
 Number of submissions: 2594 (withdrawn/desk reject submissions: 40)
 

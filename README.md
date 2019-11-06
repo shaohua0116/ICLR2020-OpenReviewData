@@ -93,7 +93,7 @@ See [How to install Selenium and ChromeDriver on Ubuntu](#Install).
 
 To crawl data from dynamic websites such as OpenReview, a headless web simulator can be created by
 
-```
+```python
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 executable_path = '/Users/waltersun/Desktop/chromedriver'  # path to your executable browser
@@ -104,7 +104,7 @@ browser = webdriver.Chrome(options=options, executable_path=executable_path)
 
 Then, we can get the content from a webpage
 
-```
+```python
 browser.get(url)
 ```
 
@@ -116,7 +116,7 @@ To know what content we to crawl, we need to inspect the webpage layout.
 
 I chose to get the content by
 
-```
+```python
 key = browser.find_elements_by_class_name("note_content_field")
 value = browser.find_elements_by_class_name("note_content_value")
 ```

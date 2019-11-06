@@ -1,0 +1,9 @@
+selenium
+pyvirtualdisplay
+numpy
+h5py
+matplotlib
+seaborn
+pandas
+imageio
+wordcloud

@@ -13,6 +13,12 @@ This Jupyter Notebook contains the data crawled from ICLR 2020 OpenReview webpag
 - Python3.6
 - [selenium](https://selenium-python.readthedocs.io/)
 - [pyvirtualdisplay](https://pypi.org/project/PyVirtualDisplay/) (run on a headless device)
+- [numpy](https://numpy.org/)
+- [h5py](https://www.h5py.org/)
+- [matplotlib](https://matplotlib.org/)
+- [seaborn](https://seaborn.pydata.org/)
+- [pandas](https://pandas.pydata.org/)
+- [imageio](https://pypi.org/project/imageio/)
 - [wordcloud](https://pypi.org/project/wordcloud/)
 
 ## Visualizations 

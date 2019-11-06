@@ -6,36 +6,18 @@
 
 ## Descriptions
 
-This Jupyter Notebook contains the data and visualizations that are crawled ICLR 2020 OpenReview webpages. All the crawled data (sorted by the average ratings) can be found [here](#Data).
+This Jupyter Notebook contains the data crawled from ICLR 2020 OpenReview webpages and their visualizations. The list of submissions (sorted by the average ratings) can be found [here](#Data).
 
 ## Prerequisites
 
-- Python3.5
+- Python3.6
 - [selenium](https://selenium-python.readthedocs.io/)
 - [pyvirtualdisplay](https://pypi.org/project/PyVirtualDisplay/) (run on a headless device)
 - [wordcloud](https://pypi.org/project/wordcloud/)
-- [imageio](https://imageio.github.io/)
 
 ## Visualizations 
 
-
-The word clouds formed by keywords of submissions show the hot topics including **deep learning**, **reinforcement learning**, **representation learning**, **generative models**, **graph neural network**, etc.
-<p align="center">
-    <img src="asset/wordcloud.png" width="720"/>
-</p>
-
-This figure is plotted with python [word cloud generator](https://github.com/amueller/word_cloud) 
-
-```python
-from wordcloud import WordCloud
-wordcloud = WordCloud(max_font_size=64, max_words=160, 
-                      width=1280, height=640,
-                      background_color="black").generate(' '.join(keywords))
-plt.figure(figsize=(16, 8))
-plt.imshow(wordcloud, interpolation="bilinear")
-plt.axis("off")
-plt.show()
-```
+### Rating distribution
 
 The distribution of reviewer ratings centers around 4 (mean: 3.907).
 
@@ -65,6 +47,28 @@ print('Your papar ({:.2f}) beats {:.2f}% of submissions based on the ratings.'.f
 Your papar (5.00) beats 69.95% of submissions based on the ratings.
 ```
 
+### Word clouds
+
+The word clouds formed by keywords of submissions show the hot topics including **deep learning**, **reinforcement learning**, **representation learning**, **generative models**, **graph neural network**, etc.
+<p align="center">
+    <img src="asset/wordcloud.png" width="720"/>
+</p>
+
+This figure is plotted with python [word cloud generator](https://github.com/amueller/word_cloud) 
+
+```python
+from wordcloud import WordCloud
+wordcloud = WordCloud(max_font_size=64, max_words=160, 
+                      width=1280, height=640,
+                      background_color="black").generate(' '.join(keywords))
+plt.figure(figsize=(16, 8))
+plt.imshow(wordcloud, interpolation="bilinear")
+plt.axis("off")
+plt.show()
+```
+
+### Frequent keywords
+
 The top 50 common keywords and their frequency.
 
 <p align="center">
@@ -81,7 +85,7 @@ The average reviewer ratings and the frequency of keywords indicate that to maxi
 
 See [How to install Selenium and ChromeDriver on Ubuntu](#Install).
 
-To crawl data from dynamic websites such as OpenReview, a headless web simulator is created by
+To crawl data from dynamic websites such as OpenReview, a headless web simulator can be created by
 
 ```
 from selenium import webdriver
@@ -92,13 +96,13 @@ options.add_argument("--headless")
 browser = webdriver.Chrome(options=options, executable_path=executable_path)  
 ```
 
-Then, we can get the content of a webpage
+Then, we can get the content from a webpage
 
 ```
 browser.get(url)
 ```
 
-To know what content we can crawl, we will need to inspect the webpage layout.
+To know what content we to crawl, we need to inspect the webpage layout.
 
 <p align="center">
     <img src="asset/inspect.png" width="720"/>

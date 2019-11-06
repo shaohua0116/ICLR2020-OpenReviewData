@@ -40,7 +40,7 @@ plt.show()
 The distribution of reviewer ratings centers around 4 (mean: 3.907).
 
 <p align="center">
-    <img src="asset/rating.png" width="640"/>
+    <img src="asset/rating.png" width="800"/>
 </p>
 
 You can compute how many papers are beaten by yours with
@@ -68,7 +68,7 @@ Your papar (5.00) beats 69.95% of submissions based on the ratings.
 The top 50 common keywords and their frequency.
 
 <p align="center">
-    <img src="asset/frequency.png" width="640"/>
+    <img src="asset/frequency.png" width="720"/>
 </p>
 
 The average reviewer ratings and the frequency of keywords indicate that to maximize your chance to get higher ratings would be using the keywords such as **compositionality**, **deep learning theory**, or **gradient descent**.

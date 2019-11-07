@@ -17,6 +17,12 @@ class PaperMeta(object):
         self.decision = decision       # str
         # self.review = review           # list[str]
         self.review_len = review_len   # list[int]
+        if review_len is None or len(review_len) == 0:
+            self.review_len_max = None 
+            self.review_len_min = None
+        else:
+            self.review_len_max = np.max(review_len)
+            self.review_len_min = np.min(review_len)
         
         if len(self.rating) > 0:
             self.average_rating = np.mean(rating)

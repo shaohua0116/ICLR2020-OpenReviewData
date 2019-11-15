@@ -28,13 +28,13 @@ This Jupyter Notebook contains the data crawled from ICLR 2020 OpenReview webpag
 The distribution of reviewer ratings centers around 4 (mean: 3.9494).
 
 <p align="center">
-    <img src="asset/rating.png" width="800"/>
+    <img src="asset/rating.png" width="1024"/>
 </p>
 
 The cumulative sum of reviewer ratings.
 
 <p align="center">
-    <img src="asset/rating_cumsum.png" width="800"/>
+    <img src="asset/rating_cumsum.png" width="1024"/>
 </p>
 
 
@@ -111,13 +111,13 @@ The average review length is 395.36 words. The histogram is as follows.
 All individual ratings:
 
 <p align="center">
-    <img src="asset/rating_difference.png" width="800"/>
+    <img src="asset/rating_difference.png" width="1024"/>
 </p>
 
 The average rating for each paper:
 
 <p align="center">
-    <img src="asset/rating_mean_difference.png" width="800"/>
+    <img src="asset/rating_mean_difference.png" width="1024"/>
 </p>
 
 ## How it works
@@ -212,7 +212,7 @@ print(browser.find_element_by_class_name('bio').text)
 ```
 
 ## <a id="Data"></a>All ICLR 2020 OpenReview data
-Collected at 2019-11-14 20:01:07.823481
+Collected at 2019-11-14 20:05:00.968214
 
 Number of submissions: 2594 (withdrawn/desk reject submissions: 235)
 

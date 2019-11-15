@@ -25,11 +25,18 @@ This Jupyter Notebook contains the data crawled from ICLR 2020 OpenReview webpag
 
 ### Rating distribution
 
-The distribution of reviewer ratings centers around 4 (mean: 3.9063).
+The distribution of reviewer ratings centers around 4 (mean: 3.9494).
 
 <p align="center">
     <img src="asset/rating.png" width="800"/>
 </p>
+
+The cumulative sum of reviewer ratings.
+
+<p align="center">
+    <img src="asset/rating_cumsum.png" width="800"/>
+</p>
+
 
 You can compute how many papers are beaten by yours with
 
@@ -50,7 +57,7 @@ print('Your papar ({:.2f}) beats {:.2f}% of submissions based on the ratings.'.f
 ```
 [Output]
 ```
-Your papar (5.00) beats 69.97% of submissions based on the ratings.
+Your papar (5.00) beats 68.49% of submissions based on the ratings.
 ```
 
 ### Word clouds
@@ -97,6 +104,20 @@ The average review length is 395.36 words. The histogram is as follows.
 
 <p align="center">
     <img src="asset/review_len_hist_rating.png" width="800"/>
+</p>
+
+### Reviewer rating change during the rebuttal period
+
+All individual ratings:
+
+<p align="center">
+    <img src="asset/rating_difference.png" width="800"/>
+</p>
+
+The average rating for each paper:
+
+<p align="center">
+    <img src="asset/rating_mean_difference.png" width="800"/>
 </p>
 
 ## How it works
@@ -191,7 +212,7 @@ print(browser.find_element_by_class_name('bio').text)
 ```
 
 ## <a id="Data"></a>All ICLR 2020 OpenReview data
-Collected at 2019-11-14 12:41:26.596374
+Collected at 2019-11-14 17:29:54.369305
 
 Number of submissions: 2594 (withdrawn/desk reject submissions: 230)
 

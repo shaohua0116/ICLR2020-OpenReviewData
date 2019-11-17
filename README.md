@@ -216,7 +216,7 @@ print(browser.find_element_by_class_name('bio').text)
 ```
 
 ## <a id="Data"></a>All ICLR 2020 OpenReview data
-Collected at 2019-11-17 00:02:38.804009
+Collected at 2019-11-17 00:26:28.372279
 
 Number of submissions: 2594 (withdrawn/desk reject submissions: 338)
 

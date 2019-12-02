@@ -100,7 +100,7 @@ The average reviewer ratings and the frequency of keywords indicate that to maxi
 
 ### Review length histogram
 
-The average review length is 407.79 words. The histogram is as follows.
+The average review length is 407.82 words. The histogram is as follows.
 
 <p align="center">
     <img src="asset/review_len_hist.png" width="800"/>
@@ -216,7 +216,7 @@ print(browser.find_element_by_class_name('bio').text)
 ```
 
 ## <a id="Data"></a>All ICLR 2020 OpenReview data
-Collected at 12/01/2019 12:51:05 AM
+Collected at 12/01/2019 04:04:30 PM
 
 Number of submissions: 2594 (withdrawn/desk reject submissions: 365)
 

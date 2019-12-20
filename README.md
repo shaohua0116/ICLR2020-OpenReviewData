@@ -23,9 +23,17 @@ This Jupyter Notebook contains the data crawled from ICLR 2020 OpenReview webpag
 
 ## Visualizations 
 
+### Decision
+
+This Jupyter Notebook contains the data and visualizations that are crawled ICLR 2020 OpenReview webpages. All the crawled data (sorted by the average ratings) can be found [here](#Data). The accepted papers have an average rating of 6.2431 and 3.4246 for rejected papers. The distribution is plotted as follows. 
+
+<p align="center">
+  <img src="asset/decision.png" width="800"/>
+</p>
+
 ### Rating distribution
 
-The distribution of reviewer ratings centers around 4 (mean: 4.1822).
+The distribution of reviewer ratings centers around 4 (mean: 4.1837).
 
 <p align="center">
     <img src="asset/rating.png" width="1024"/>
@@ -52,16 +60,16 @@ print('Your papar ({:.2f}) is among the top {:.2f}% of submissions based on the 
       'There are {:.2f}% with the same rating.'.format(
           my_rating, 100-pr, same_rating))
 
-#            accept rate       orals     posters
-# ICLR 2017: 39.1% (198/507)    15         183
-# ICLR 2018: 32.0% (314/981)    23         291
-# ICLR 2019: 31.4% (500/1591)   24         476
-# ICLR 2020: ?     (?/2594)
+#            accept rate       orals    spotlight   posters
+# ICLR 2017: 39.1% (198/507)    15                    183
+# ICLR 2018: 32.0% (314/981)    23                    291
+# ICLR 2019: 31.4% (500/1591)   24                    476
+# ICLR 2020: 26.5% (687/2594)   48         108        529
 ```
 [Output]
 ```
-Your papar (6.00) is among the top 21.67% of submissions based on the ratings.
-There are 8.12% with the same rating.
+Your papar (6.00) is among the top 21.79% of submissions based on the ratings.
+There are 8.24% with the same rating.
 ```
 
 ### Word clouds

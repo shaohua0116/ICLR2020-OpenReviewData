@@ -6,7 +6,7 @@ import string
 class PaperMeta(object):
     def __init__(self, title, abstract, keyword, rating, url, 
                  withdrawn, desk_reject, decision, # review=None, 
-                 review_len=None):
+                 review_len=None, meta_review_len=0):
         self.title = title             # str
         self.abstract = abstract       # str
         self.keyword = keyword         # list[str]
@@ -17,6 +17,7 @@ class PaperMeta(object):
         self.decision = decision       # str
         # self.review = review           # list[str]
         self.review_len = review_len   # list[int]
+        self.meta_review_len = meta_review_len   # int
         if review_len is None or len(review_len) == 0:
             self.review_len_max = None 
             self.review_len_min = None
@@ -63,6 +64,7 @@ def write_meta(meta_list, filename):
         grp['decision'] = m.decision
         # grp['review'] = m.review        
         grp['review_len'] = m.review_len                
+        grp['meta_review_len'] = m.meta_review_len
     f.close()
     
     
@@ -81,6 +83,7 @@ def read_meta(filename):
             f[k]['decision'].value,
             # f[k]['review'].value if 'review' in list(f[k].keys()) else None,
             f[k]['review_len'].value if 'review_len' in list(f[k].keys()) else None,      
+            f[k]['meta_review_len'].value if 'meta_review_len' in list(f[k].keys()) else None,      
         ))
     return meta_list
 
@@ -168,18 +171,28 @@ def crawl_meta(meta_hdf5=None, write_meta_name='data.hdf5', crawl_review=False):
                     for idx in review_idx:
                         review_len.append(len([w for w in value[idx].replace('\n', ' ').split(' ') if not w == '']))
                         # review.append(value[idx])
+
             # decision
-            if 'Recommendation:' in key:
-                decision = value[key.index('Recommendation:')]
+            if 'Decision:' in key:
+                decision = value[key.index('Decision:')]
+                meta_review = value[key.index('Decision:')+1]
             else:
                 decision = 'N/A'
+                meta_review = ''
+            meta_review_len = len([w for w in meta_review.replace('\n', ' ').split(' ') if not w == ''])
             
             # log
+            log_str = '[{}] ratings: {}'.format(
+                i+1, rating,
+            )
+            """
             log_str = '[{}] Abs: {} chars, keywords: {}, ratings: {}'.format(
                 i+1, len(abstract), len(keyword), rating,
             )
             if crawl_review:
                 log_str += ', review len: {}'.format(review_len)
+            """
+            log_str += ', meta review len: {}'.format(meta_review_len)
             if not decision == 'N/A':
                 log_str += ', decision: {}'.format(decision)
             log_str += '] {}'.format(title)
@@ -195,6 +208,7 @@ def crawl_meta(meta_hdf5=None, write_meta_name='data.hdf5', crawl_review=False):
                 withdrawn, desk_reject, decision,
                 # None if not crawl_review else review,
                 None if not crawl_review else review_len,                    
+                meta_review_len,
             ))
             
         # Save the crawled data

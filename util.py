@@ -96,9 +96,9 @@ def crawl_meta(meta_hdf5=None, write_meta_name='data.hdf5', crawl_review=False):
         from selenium import webdriver
         from selenium.webdriver.chrome.options import Options
         
-        # from pyvirtualdisplay import Display
-        # display = Display(visible=0, size=(800, 800))
-        # display.start()
+        from pyvirtualdisplay import Display
+        display = Display(visible=0, size=(800, 800))
+        display.start()
         
         import time
         executable_path = '/usr/local/bin/chromedriver'
@@ -113,7 +113,7 @@ def crawl_meta(meta_hdf5=None, write_meta_name='data.hdf5', crawl_review=False):
         urls = [url.strip() for url in urls]
         
         meta_list = [] 
-        wait_time = 0.5
+        wait_time = 0.25
         max_try = 1000
         for i, url in enumerate(urls):
             browser.get(url)

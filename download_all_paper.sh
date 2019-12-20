@@ -2560,7 +2560,7 @@ curl -o On_The_Linguistic_Capacity_Of_Real-time_Counter_Automata.pdf https://ope
 curl -o Zero-shot_Task_Adaptation_By_Homoiconic_Meta-mapping.pdf https://openreview.net/pdf?id=HyeX7aVKvr
 curl -o Few-shot_One-class_Classification_Via_Meta-learning.pdf https://openreview.net/pdf?id=B1ltfgSYwS
 curl -o Vl-bert:_Pre-training_Of_Generic_Visual-linguistic_Representations.pdf https://openreview.net/pdf?id=SygXPaEYvH
-curl -o Unveiling_Hidden_Biases_In_Deep_Networks_With_Classification_Images_And_Spike_Triggered_Analysis.pdf https://openreview.net/pdf?id=H1ebhnEYDH
+curl -o White_Noise_Analysis_Of_Neural_Networks.pdf https://openreview.net/pdf?id=H1ebhnEYDH
 curl -o Learning_To_Rank_Learning_Curves.pdf https://openreview.net/pdf?id=BJxAHgSYDB
 curl -o Deep_Symbolic_Superoptimization_Without_Human_Knowledge.pdf https://openreview.net/pdf?id=r1egIyBFPS
 curl -o Evaluations_And_Methods_For_Explanation_Through_Robustness_Analysis.pdf https://openreview.net/pdf?id=Hye4KeSYDr

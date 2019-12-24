@@ -132,6 +132,15 @@ The average rating for each paper:
     <img src="asset/rating_mean_difference.png" width="1024"/>
 </p>
 
+### Top authors
+
+The authors with more than 5 submissions.
+
+<p align="center">
+    <img src="asset/author.png" width="1024"/>
+</p>
+
+
 ## How it works
 
 See [How to install Selenium and ChromeDriver on Ubuntu](#Install).
@@ -224,7 +233,7 @@ print(browser.find_element_by_class_name('bio').text)
 ```
 
 ## <a id="Data"></a>All ICLR 2020 OpenReview data
-Collected at 12/19/2019 08:33:58 PM
+Collected at 12/23/2019 03:59:42 PM
 
 Number of submissions: 2594 (withdrawn/desk reject submissions: 383)
 
@@ -240,7 +249,7 @@ Number of submissions: 2594 (withdrawn/desk reject submissions: 383)
 | 8 | 8.00 | [Restricting The Flow: Information Bottlenecks For Attribution](https://openreview.net/forum?id=S1xWh1rYwB) | 8, 8, 8 | 0.00 | Accept (Talk) |
 | 9 | 8.00 | [Causal Discovery With Reinforcement Learning](https://openreview.net/forum?id=S1g2skStPB) | 8, 8, 8 | 0.00 | Accept (Talk) |
 | 10 | 8.00 | [Dynamics-aware Unsupervised Skill Discovery](https://openreview.net/forum?id=HJgLZR4KvH) | 8, 8, 8 | 0.00 | Accept (Talk) |
-| 11 | 8.00 | [An Algorithm-agnostic Nas Benchmark](https://openreview.net/forum?id=HJxyZkBKDr) | 8, 8, 8 | 0.00 | Accept (Spotlight) |
+| 11 | 8.00 | [Nas-bench-102: Extending The Scope Of Reproducible Neural Architecture Search](https://openreview.net/forum?id=HJxyZkBKDr) | 8, 8, 8 | 0.00 | Accept (Spotlight) |
 | 12 | 8.00 | [Data-dependent Gaussian Prior Objective For Language Generation](https://openreview.net/forum?id=S1efxTVYDr) | 8, 8, 8 | 0.00 | Accept (Talk) |
 | 13 | 8.00 | [Gendice: Generalized Offline Estimation Of Stationary Values](https://openreview.net/forum?id=HkxlcnVFwB) | 8, 8, 8 | 0.00 | Accept (Talk) |
 | 14 | 8.00 | [Mathematical Reasoning In Latent Space](https://openreview.net/forum?id=Ske31kBtPr) | 8, 8, 8 | 0.00 | Accept (Talk) |
@@ -406,7 +415,7 @@ Number of submissions: 2594 (withdrawn/desk reject submissions: 383)
 | 174 | 6.67 | [Fast Is Better Than Free: Revisiting Adversarial Training](https://openreview.net/forum?id=BJx040EFvH) | 8, 6, 6 | 0.94 | Accept (Poster) |
 | 175 | 6.67 | [Where Is The Information In A Deep Network?](https://openreview.net/forum?id=BkgHWkrtPB) | 6, 8, 6 | 0.94 | Reject |
 | 176 | 6.67 | [A Fair Comparison Of Graph Neural Networks For Graph Classification](https://openreview.net/forum?id=HygDF6NFPB) | 6, 8, 6 | 0.94 | Accept (Poster) |
-| 177 | 6.67 | [Co-attentive Equivariant Neural Networks: Focusing Equivariance On Transformations Co-ocurring In Data](https://openreview.net/forum?id=r1g6ogrtDr) | 6, 8, 6 | 0.94 | Accept (Poster) |
+| 177 | 6.67 | [Co-attentive Equivariant Neural Networks: Focusing Equivariance On Transformations Co-occurring In Data](https://openreview.net/forum?id=r1g6ogrtDr) | 6, 8, 6 | 0.94 | Accept (Poster) |
 | 178 | 6.67 | [Robust Reinforcement Learning For Continuous Control With Model Misspecification](https://openreview.net/forum?id=HJgC60EtwB) | 6, 6, 8 | 0.94 | Accept (Poster) |
 | 179 | 6.67 | [Safe Policy Learning For Continuous Control](https://openreview.net/forum?id=HkxeThNFPH) | 6, 8, 6 | 0.94 | Reject |
 | 180 | 6.67 | [Permutation Equivariant Models For Compositional Generalization In Language](https://openreview.net/forum?id=SylVNerFvr) | 8, 6, 6 | 0.94 | Accept (Poster) |
@@ -564,7 +573,7 @@ Number of submissions: 2594 (withdrawn/desk reject submissions: 383)
 | 332 | 6.33 | [A Meta-transfer Objective For Learning To Disentangle Causal Mechanisms](https://openreview.net/forum?id=ryxWIgBFPS) | 3, 8, 8 | 2.36 | Accept (Poster) |
 | 333 | 6.33 | [Word2ket: Space-efficient Word Embeddings Inspired By Quantum Entanglement](https://openreview.net/forum?id=HkxARkrFwB) | 3, 8, 8 | 2.36 | Accept (Spotlight) |
 | 334 | 6.33 | [Counterfactuals Uncover The Modular Structure Of Deep Generative Models](https://openreview.net/forum?id=SJxDDpEKvH) | 8, 3, 8 | 2.36 | Accept (Poster) |
-| 335 | 6.33 | [Augmix: A Simple Method To Improve Robustness And Uncertainty Under Data Shift](https://openreview.net/forum?id=S1gmrxHFvB) | 8, 3, 8 | 2.36 | Accept (Poster) |
+| 335 | 6.33 | [Augmix: A Simple Data Processing Method To Improve Robustness And Uncertainty](https://openreview.net/forum?id=S1gmrxHFvB) | 8, 3, 8 | 2.36 | Accept (Poster) |
 | 336 | 6.33 | [Measuring And Improving The Use Of Graph Information In Graph Neural Networks](https://openreview.net/forum?id=rkeIIkHKvS) | 8, 3, 8 | 2.36 | Accept (Poster) |
 | 337 | 6.33 | [Aggregating Explanation Methods For Neural Networks Stabilizes Explanations](https://openreview.net/forum?id=B1xeZJHKPB) | 8, 3, 8 | 2.36 | Reject |
 | 338 | 6.33 | [A Causal View On Robustness Of Neural Networks](https://openreview.net/forum?id=Hkxvl0EtDH) | 3, 8, 8 | 2.36 | Reject |
@@ -984,7 +993,7 @@ Number of submissions: 2594 (withdrawn/desk reject submissions: 383)
 | 752 | 5.00 | [Advantage Weighted Regression: Simple And Scalable Off-policy Reinforcement Learning](https://openreview.net/forum?id=H1gdF34FvS) | 6, 3, 6 | 1.41 | Reject |
 | 753 | 5.00 | [A Stochastic Trust Region Method For Non-convex Minimization](https://openreview.net/forum?id=HkxJpnVtPr) | 3, 8, 6, 3 | 2.12 | Reject |
 | 754 | 5.00 | [Detecting Out-of-distribution Inputs To Deep Generative Models Using Typicality](https://openreview.net/forum?id=r1lnxTEYPS) | 6, 6, 3 | 1.41 | Reject |
-| 755 | 5.00 | [V4d: 4d Covolutional Neural Networks For Video-level Representations Learning](https://openreview.net/forum?id=SJeLopEYDH) | 3, 6, 6 | 1.41 | Accept (Poster) |
+| 755 | 5.00 | [V4d: 4d Convonlutional Neural Networks For Video-level Representation Learning](https://openreview.net/forum?id=SJeLopEYDH) | 3, 6, 6 | 1.41 | Accept (Poster) |
 | 756 | 5.00 | [Foveabox: Beyound Anchor-based Object Detection](https://openreview.net/forum?id=HyxFF34FPr) | 3, 6, 6 | 1.41 | Reject |
 | 757 | 5.00 | [Improving Sequential Latent Variable Models With Autoregressive Flows](https://openreview.net/forum?id=HklvmlrKPB) | 6, 6, 3 | 1.41 | Reject |
 | 758 | 5.00 | [Self-educated Language Agent With Hindsight Experience Replay For Instruction Following](https://openreview.net/forum?id=S1g_t1StDB) | 3, 6, 6 | 1.41 | Reject |
@@ -1123,7 +1132,7 @@ Number of submissions: 2594 (withdrawn/desk reject submissions: 383)
 | 891 | 5.00 | [Attributed Graph Learning With 2-d Graph Convolution](https://openreview.net/forum?id=B1gNKxrYPB) | 6, 6, 3 | 1.41 | Reject |
 | 892 | 5.00 | [Bayesian Inference For Large Scale Image Classification](https://openreview.net/forum?id=rklFh34Kwr) | 6, 3, 6 | 1.41 | Reject |
 | 893 | 5.00 | [Versatile Anomaly Detection With Outlier Preserving Distribution Mapping Autoencoders](https://openreview.net/forum?id=SkxV0RVYDH) | 3, 6, 6 | 1.41 | Reject |
-| 894 | 5.00 | [Lamal: Language Modeling Is All You Need For Lifelong Language Learning](https://openreview.net/forum?id=Skgxcn4YDS) | 6, 3, 6 | 1.41 | Accept (Poster) |
+| 894 | 5.00 | [Lamol: Language Modeling For Lifelong Language Learning](https://openreview.net/forum?id=Skgxcn4YDS) | 6, 3, 6 | 1.41 | Accept (Poster) |
 | 895 | 5.00 | [Certifying Distributional Robustness Using Lipschitz Regularisation](https://openreview.net/forum?id=H1eo9h4KPH) | 6, 6, 3 | 1.41 | Reject |
 | 896 | 5.00 | [Evolutionary Reinforcement Learning For Sample-efficient Multiagent Coordination](https://openreview.net/forum?id=rkxtNaNKwr) | 1, 8, 6 | 2.94 | Reject |
 | 897 | 5.00 | [Why Does The Vqa Model Answer No?: Improving Reasoning Through Visual And Linguistic Inference](https://openreview.net/forum?id=HJlvCR4KDS) | 3, 6, 6 | 1.41 | Reject |

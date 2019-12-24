@@ -5,7 +5,7 @@ import string
 # Meta data of papers
 class PaperMeta(object):
     def __init__(self, title, abstract, keyword, rating, url, 
-                 withdrawn, desk_reject, decision, # review=None, 
+                 withdrawn, desk_reject, decision, author, # review=None, 
                  review_len=None, meta_review_len=0):
         self.title = title             # str
         self.abstract = abstract       # str
@@ -16,6 +16,7 @@ class PaperMeta(object):
         self.desk_reject = desk_reject # bool       
         self.decision = decision       # str
         # self.review = review           # list[str]
+        self.author = author           # list[str]
         self.review_len = review_len   # list[int]
         self.meta_review_len = meta_review_len   # int
         if review_len is None or len(review_len) == 0:
@@ -62,6 +63,7 @@ def write_meta(meta_list, filename):
         grp['withdrawn'] = m.withdrawn 
         grp['desk_reject'] = m.desk_reject         
         grp['decision'] = m.decision
+        grp['author'] = '#'.join(m.author)
         # grp['review'] = m.review        
         grp['review_len'] = m.review_len                
         grp['meta_review_len'] = m.meta_review_len
@@ -82,6 +84,7 @@ def read_meta(filename):
             f[k]['desk_reject'].value,                        
             f[k]['decision'].value,
             # f[k]['review'].value if 'review' in list(f[k].keys()) else None,
+            f[k]['author'].value.split('#') if 'author' in list(f[k].keys()) else None,
             f[k]['review_len'].value if 'review_len' in list(f[k].keys()) else None,      
             f[k]['meta_review_len'].value if 'meta_review_len' in list(f[k].keys()) else None,      
         ))
@@ -127,6 +130,8 @@ def crawl_meta(meta_hdf5=None, write_meta_name='data.hdf5', crawl_review=False):
 
             # title
             title = string.capwords(browser.find_element_by_class_name("note_content_title").text)
+            author = string.capwords(browser.find_element_by_class_name("meta_row").text).split(', ')
+
             # abstract
             valid = False
             tries = 0
@@ -196,6 +201,7 @@ def crawl_meta(meta_hdf5=None, write_meta_name='data.hdf5', crawl_review=False):
             if not decision == 'N/A':
                 log_str += ', decision: {}'.format(decision)
             log_str += '] {}'.format(title)
+            log_str += ' by {}'.format(', '.join(author))
 
             if withdrawn:
                 log_str += ' (withdrawn)'
@@ -205,7 +211,7 @@ def crawl_meta(meta_hdf5=None, write_meta_name='data.hdf5', crawl_review=False):
             
             meta_list.append(PaperMeta(
                 title, abstract, keyword, rating, url,                        
-                withdrawn, desk_reject, decision,
+                withdrawn, desk_reject, decision, author,
                 # None if not crawl_review else review,
                 None if not crawl_review else review_len,                    
                 meta_review_len,
